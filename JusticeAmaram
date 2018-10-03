@@ -1,17 +1,17 @@
 var array = [2,4,6,8,10,12,14,16]
 var x = 16
 function binarySearch(array, x) {
-    let left = 0;
-    let right = array.length - 1;
-    while (left <= right) {
-        const mid = left + Math.floor((right - left) / 2);
+    let leftNum = 0;
+    let rightNum = array.length - 1;
+    while (leftNum <= rightNum) {
+        const mid = left + Math.floor((rightNum - leftNum) / 2);
         if (array[mid] === x) {
             return mid;
         }
         if (array[mid] < x) {
-            left = mid + 1;
+            leftNum = mid + 1;
         } else {
-            right = mid - 1;
+            rightNum = mid - 1;
         }
     }
     return -1;
