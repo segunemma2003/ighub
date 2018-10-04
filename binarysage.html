@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en-us">
+    <head>
+        <title> Lenear Search</title>
+        <meta charset="utf-8" />
+</head>
+<body>
+    <script>
+        var bin=[2,4,6,8,10,12,14,16,18];
+        var x=16;
+        function binarySearch(bin, x){
+            let left = 0;
+            let right =bin.length -1;
+            while (left <= right){
+                const mid = left + Math.floor ((right - left)/2);
+                if (bin[mid] === x){
+                    return mid;
+
+                }
+                if (bin[mid] < target){
+                    left = mid + 1;
+                }
+                else {
+                    right =mid -1;
+                }
+            }
+            return -1;
+        }
+        </script>
+        </body>
+        </html>
