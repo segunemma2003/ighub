@@ -1,0 +1,20 @@
+var y=[2,4,6,8,10,12,14,16,18]
+var x=14
+function binarySearch(array, x) {
+    let leftNum = 0;
+    let rightNum = array.length - 1;
+    while (leftNum <= rightNum) {
+        const mid = left + Math.floor((rightNum - leftNum) / 2);
+        if (array[mid] === x) {
+            return mid;
+        }
+        if (array[mid] < x) {
+            leftNum = mid + 1;
+        } else {
+            rightNum = mid - 1;
+        }
+    }
+    return -1;
+}
+
+console.log(binarySearch(array, x) === 16 );
